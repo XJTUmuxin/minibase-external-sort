@@ -121,33 +121,14 @@ Status Sort::firstPass(char *inFile, int bufferNum,int& tempHFnum){
 	char* temp = mem;
 	int len;
 	int record_num = 0;
-	/*struct R1
-	{
-		char filler[800];
-		char key[32];
-	} rec;*/
 	while(scan->getNext(rid,temp,len)!=DONE){
-		//cout<<"record_num: "<<record_num<<endl;
-		//cout<<temp[0]<<temp[1]<<temp[2]<<endl;
-		//cout<<f.getRecCnt()<<endl;
-		//cout<<inFile<<endl;
-		//cout<<rec.key<<endl;
-		//cout<<len<<endl;
 		record_num++;
 		temp += len;
-		//cout<<"len:"<<len<<endl;
-		//cout<<"amt_of_bytes:"<<amt_of_bytes<<endl;
 		if(record_num*len+len>amt_of_bytes){
 			//排序
-			//cout<<"sort"<<endl;
 			qsort(mem,record_num,len,tupleCmp);
-			//cout<<mem<<endl;
-			//cout<<"sort end"<<endl;
-			//创建新的HF
-			//cout<<"create new hf"<<endl;
 			char* name;
 			makeHFname(name,1,tempHFnum);
-			//cout<<name<<endl;
 			HeapFile f_temp(name,s);
 			char* temp2 = mem;
 			for(int i=0;i<record_num;++i){
@@ -165,11 +146,9 @@ Status Sort::firstPass(char *inFile, int bufferNum,int& tempHFnum){
 	if(record_num>0){
 		//排序
 			qsort(mem,record_num,len,tupleCmp);
-			//cout<<"sort end"<<endl;
 			//创建新的HF
 			char* name;
 			makeHFname(name,1,tempHFnum);
-			//cout<<name<<endl;
 			HeapFile f_temp(name,s);
 			char* temp2 = mem;
 			for(int i=0;i<record_num;++i){
