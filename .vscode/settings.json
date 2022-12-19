@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "main.C": "cpp",
+        "page.C": "cpp",
+        "db.C": "cpp",
+        "sort.C": "cpp",
+        "scan.C": "cpp",
+        "qsort_example.C": "cpp",
+        "system_defs.C": "cpp",
+        "test_driver.C": "cpp",
+        "new_error.C": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "any": "cpp",
+        "bitset": "cpp",
+        "memory": "cpp",
+        "random": "cpp",
+        "future": "cpp",
+        "memory_resource": "cpp",
+        "optional": "cpp",
+        "*.tcc": "cpp",
+        "istream": "cpp",
+        "regex": "cpp"
+    }
+}
