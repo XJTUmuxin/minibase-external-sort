@@ -33,6 +33,9 @@ class Sort
 
 	   Status&     s
        );
+  Sort(const Sort&) = delete;
+  
+  Sort& operator=(const Sort&) = delete;
 
   ~Sort();
 
